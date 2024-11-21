@@ -1,5 +1,5 @@
 {
-	"name" : "zoho/office-integrator-sdk",
+	"name" : "zohocorporation/office-integrator-sdk",
 	"description" : "PHP SDK for Zoho Office Integrator",
 	"type" : "sdk",
 	"authors" : [
