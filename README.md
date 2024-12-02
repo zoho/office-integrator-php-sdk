@@ -4,7 +4,8 @@
 
 # PHP SDK
 
-[![PHP Version Require](http://poser.pugx.org/officeintegrator/zoi-php-sdk/require/php)](https://packagist.org/packages/officeintegrator/zoi-php-sdk) [![Downloads](https://poser.pugx.org/officeintegrator/zoi-php-sdk/d/total.svg)](https://packagist.org/packages/officeintegrator/zoi-php-sdk) [![License](https://poser.pugx.org/officeintegrator/zoi-php-sdk/license.svg)](https://packagist.org/packages/officeintegrator/zoi-php-sdk)
+[![PHP Version](https://poser.pugx.org/zohocorporation/office-integrator-sdk/require/php)](https://packagist.org/packages/zohocorporation/office-integrator-sdk)
+[![Downloads](https://poser.pugx.org/zohocorporation/office-integrator-sdk/d/total.svg)](https://packagist.org/packages/zohocorporation/office-integrator-sdk) [![License](https://poser.pugx.org/zohocorporation/office-integrator-sdk/license.svg)](https://packagist.org/packages/zohocorporation/office-integrator-sdk)
 
 ## Table Of Contents
 
@@ -33,7 +34,7 @@ Since Zoho Office Integrator APIs are authenticated with apikey, you should regi
 
 ## Environmental Setup
 
-PHP SDK is installable through **composer**. **composer** is a tool for dependency management in PHP. Composer installs PHP sdk in your application from **[packagist](https://packagist.org/packages/officeintegrator/zoi-php-sdk)**.
+PHP SDK is installable through **composer**. **composer** is a tool for dependency management in PHP. Composer installs PHP sdk in your application from **[packagist](https://packagist.org/packages/zohocorporation/office-integrator-sdk)**.
 
 - Client app must have PHP(version 7.0 and above)
 
@@ -47,13 +48,13 @@ You can include the SDK to your project using:
 
 - Install **PHP SDK**
     - Navigate to the workspace of your client app.
-    - Create a composer.json in your application add **zoi-nodejs-sdk** in dependency list. [Example](https://github.com/iampraba/zoi-php-sdk-examples/blob/main/composer.json)
+    - Create a composer.json in your application add [**zohocorporation/office-integrator-sdk**](https://packagist.org/packages/zohocorporation/office-integrator-sdk) in dependency list. [Example](https://github.com/zoho/office-integrator-php-sdk-examples/blob/main/composer.json#L15)
     - Now run the command below:
 
     ```sh
     composer install
     ```
-- The PHP SDK will be installed and a package named **/zoi-php-sdk-1.*.*** will be created in your work space under the vendor folder.
+- The PHP SDK will be installed and a package named **./zohocorporation/office-integrator-sdk.**** will be created in your work space under the vendor folder.
 
 
 ## Configuration
@@ -81,7 +82,6 @@ Before you get started with creating your PHP application, you need to register 
     $authBuilder->addParam("apikey", "2ae438cf864488657cc9754a27daa480");
     $authBuilder->authenticationSchema($authentication->getTokenFlow());
     $tokens = [ $authBuilder->build() ];
-    $apikey = new APIKey("2ae438cf864488657cc9754a27daa480", Constants::PARAMS);
     ```
 
 - Create an instance of **Logger** Class to log exception and API information. By default, the SDK constructs a Logger instance with level - INFO and file_path - (sdk_logs.log parallel to node_modules)
@@ -94,7 +94,7 @@ Before you get started with creating your PHP application, you need to register 
     */
     $logger = (new LogBuilder())
             ->level(Levels::INFO)
-            ->filePath("./app.log")
+            ->filePath("./sdk_logs.log")
             ->build();
     ```
 
@@ -152,7 +152,7 @@ Initialize::initializeSdk();
 ## SDK Sample code
 
 - Make sure you have [initialized the sdk](#initializing-the-application) before running below sample code snippet.
-- Refer this **[repository](https://github.com/iampraba/zoi-php-sdk-examples)** for example codes to all Office Integrator API endpoints.
+- Refer this **[repository](https://github.com/zoho/office-integrator-php-sdk-examples)** for example codes to all Office Integrator API endpoints.
 
 ## License
 
